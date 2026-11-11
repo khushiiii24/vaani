@@ -1,0 +1,11 @@
+request_id,scenario,source,start_time,first_token_ms,total_ms,status,retries,tokens_in,tokens_out,retrieval_setting,answer_grade
+real_steady-0000,real_steady,real,2026-11-10T19:01:30.720+00:00,1387,1393,ok,0,2317,104,S2,correct
+real_steady-0001,real_steady,real,2026-11-10T19:02:00.720+00:00,1488,1488,ok,0,2061,119,S2,correct
+real_steady-0002,real_steady,real,2026-11-10T19:02:30.720+00:00,1503,1503,ok,0,1920,122,S2,correct
+real_steady-0003,real_steady,real,2026-11-10T19:03:00.720+00:00,1503,1503,ok,0,2127,98,S2,correct
+real_steady-0004,real_steady,real,2026-11-10T19:03:30.720+00:00,1555,1555,ok,0,2117,110,S2,correct
+real_steady-0005,real_steady,real,2026-11-10T19:04:00.720+00:00,1259,1259,ok,0,2131,144,S2,correct
+real_steady-0006,real_steady,real,2026-11-10T19:04:30.720+00:00,1275,1275,ok,0,2067,128,S2,correct
+real_steady-0007,real_steady,real,2026-11-10T19:05:00.720+00:00,1177,1177,ok,0,1951,90,S2,correct
+real_steady-0008,real_steady,real,2026-11-10T19:05:30.720+00:00,937,937,ok,0,1982,144,S2,correct
+real_steady-0009,real_steady,real,2026-11-10T19:06:00.720+00:00,724,724,ok,0,1995,121,S2,correct

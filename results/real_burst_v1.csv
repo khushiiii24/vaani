@@ -1,0 +1,11 @@
+request_id,scenario,source,start_time,first_token_ms,total_ms,status,retries,tokens_in,tokens_out,retrieval_setting,answer_grade
+real_burst_v1-0000,real_burst_v1,real,2026-11-10T19:06:59.794+00:00,1033,1038,ok,0,2317,104,S2,correct
+real_burst_v1-0001,real_burst_v1,real,2026-11-10T19:06:59.894+00:00,858,858,ok,0,2061,119,S2,correct
+real_burst_v1-0002,real_burst_v1,real,2026-11-10T19:06:59.994+00:00,501,501,rate_limited,0,227,55,S2,refused_wrongly
+real_burst_v1-0003,real_burst_v1,real,2026-11-10T19:07:00.094+00:00,636,636,rate_limited,0,216,44,S2,correct
+real_burst_v1-0004,real_burst_v1,real,2026-11-10T19:07:00.194+00:00,438,438,rate_limited,0,229,48,S2,correct
+real_burst_v1-0005,real_burst_v1,real,2026-11-10T19:07:00.294+00:00,365,365,rate_limited,0,218,91,S2,refused_wrongly
+real_burst_v1-0006,real_burst_v1,real,2026-11-10T19:07:00.394+00:00,576,576,rate_limited,0,222,66,S2,refused_wrongly
+real_burst_v1-0007,real_burst_v1,real,2026-11-10T19:07:00.494+00:00,2,2,rate_limited,0,0,0,S2,refused_wrongly
+real_burst_v1-0008,real_burst_v1,real,2026-11-10T19:07:00.594+00:00,2,2,rate_limited,0,0,0,S2,refused_wrongly
+real_burst_v1-0009,real_burst_v1,real,2026-11-10T19:07:00.694+00:00,2,2,rate_limited,0,0,0,S2,correct

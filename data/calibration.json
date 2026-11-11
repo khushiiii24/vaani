@@ -1,0 +1,50 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "measured_at": "2026-11-11 00:31",
+  "ttft_p50_ms": 556.0,
+  "ttft_p95_ms": 977.0,
+  "ttft_p99_ms": 2796.0,
+  "ttft_max_ms": 2796.0,
+  "latency_requests": 10,
+  "tokens_per_s": 802,
+  "tpm": 8000,
+  "rpd": 1000,
+  "rpm": 31,
+  "tpd": 200000,
+  "tpm_counts_max_tokens": false,
+  "tpm_drop_for_max_tokens_3000": 108,
+  "tpm_drop_for_max_tokens_5": -108,
+  "rpm_first_429_at_request": 32,
+  "rpm_retry_after_s": 2.0,
+  "rpm_recovery_s": 2.5,
+  "tpm_429_count_of_5": 1,
+  "tpm_retry_after_s": 15.0,
+  "tpm_recovery_s": 14.7,
+  "concurrent_ok_of_10": 10,
+  "error_rate": 0.0,
+  "requests_sent": 65,
+  "tokens_used": 32100,
+  "compare": {
+    "openai/gpt-oss-20b": {
+      "requests": 10,
+      "first_answer_token_median_ms": 578.5,
+      "thinking_median_ms": 45.0,
+      "output_tokens_median": 63.0,
+      "input_tokens_median": 1811.0,
+      "empty_answers": 0
+    },
+    "qwen/qwen3.8-27b": {
+      "requests": 10,
+      "first_answer_token_median_ms": 279.5,
+      "thinking_median_ms": 0.0,
+      "output_tokens_median": 23.5,
+      "input_tokens_median": 1856.5,
+      "empty_answers": 0
+    }
+  },
+  "probe_ttft_p50_ms": 617,
+  "probe_ttft_p95_ms": 1841,
+  "ttft_samples": 70,
+  "ttft_samples_from_probe": 10,
+  "thinking_ms": 69
+}

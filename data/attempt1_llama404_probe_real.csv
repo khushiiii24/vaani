@@ -1,0 +1,172 @@
+test,model,sent_at,status,ttft_ms,total_ms,tokens_in,tokens_out,max_tokens,retry_after,limit_requests_day,remaining_requests_day,limit_tokens_min,remaining_tokens_min,reset_tokens,message
+A_headers,llama-3.1-8b-instant,23:51:36,error,,169,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+A_headers,llama-3.3-70b-versatile,23:51:37,error,,92,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.3-70b-versatile` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+A_headers,openai/gpt-oss-20b,23:51:37,ok,1561,1561,78,5,5,,1000,999,8000,7917,622ms,
+B_latency,llama-3.1-8b-instant,23:51:38,error,,121,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:51:38,error,,99,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:52:39,error,,134,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:52:39,error,,106,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:53:40,error,,114,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:53:40,error,,114,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:54:41,error,,127,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:54:41,error,,86,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:55:42,error,,118,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:55:42,error,,93,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:56:43,error,,381,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:56:44,error,,479,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:57:44,error,,118,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:57:45,error,,129,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:58:45,error,,113,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:58:46,error,,100,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:59:46,error,,115,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,23:59:47,error,,112,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,00:00:47,error,,173,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+B_latency,llama-3.1-8b-instant,00:00:47,error,,101,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+C_max5,llama-3.1-8b-instant,00:01:49,error,,109,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+C_max3000,llama-3.1-8b-instant,00:01:50,error,,181,,,3000,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+C_max5_again,llama-3.1-8b-instant,00:01:50,error,,106,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,96,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,101,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,101,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,109,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,104,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,109,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,120,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,108,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,109,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+D_concurrent,llama-3.1-8b-instant,00:02:52,error,,118,,,5,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:54,error,,91,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:54,error,,79,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:54,error,,86,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:54,error,,94,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:54,error,,125,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:54,error,,90,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,89,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,77,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,83,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,79,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,86,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,82,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,94,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,86,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,105,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,94,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:55,error,,84,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:56,error,,80,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:56,error,,75,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:56,error,,103,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:56,error,,100,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:56,error,,87,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:56,error,,1043,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:57,error,,106,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:57,error,,88,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:57,error,,107,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:57,error,,112,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:57,error,,85,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,102,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,96,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,114,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,102,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,89,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,118,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,108,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,83,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,85,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:58,error,,110,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:59,error,,90,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:59,error,,110,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:59,error,,114,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:59,error,,108,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:59,error,,104,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:59,error,,83,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+E_rpm,llama-3.1-8b-instant,00:03:59,error,,111,,,1,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+F_tpm,llama-3.1-8b-instant,00:05:01,error,,99,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+F_tpm,llama-3.1-8b-instant,00:05:01,error,,114,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+F_tpm,llama-3.1-8b-instant,00:05:01,error,,113,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+F_tpm,llama-3.1-8b-instant,00:05:01,error,,113,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
+F_tpm,llama-3.1-8b-instant,00:05:01,error,,118,,,300,,,,,,,"HTTP 404: {""error"":{""message"":""The model `llama-3.1-8b-instant` does not exist or you do not have access to it."",""type"":""invalid_request_error"",""code"":""model_not_found""}}
+"
