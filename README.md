@@ -27,7 +27,7 @@ behaves when traffic and rate limits get rough.
    |
  1 ADMIT        daily budget left?  no  -> passages-only reply (no model call)
    |            low or per-minute limit close -> "lean" mode (skip step 2)
- 2 UNDERSTAND   small model call -> {on_topic, which paper, search words}   (optional, 2 s max)
+ 2 UNDERSTAND   small model call -> {on_topic, which paper, search words}   (optional, 3 s max)
    |
  3 RETRIEVE     tool: BM25 search over the papers
    |            LOOP: nothing relevant with the paper filter -> search again without it

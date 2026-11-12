@@ -12,7 +12,7 @@ Definitions (so a reviewer can recompute them):
   timed out/given up %  status == timeout;  (status == error is listed separately)
   peak queue       most requests at one moment that had arrived but not yet got a first token
   tokens/answer    mean of tokens_in + tokens_out over all requests in the scenario
-  cost / 1,000     free tier costs $0; the $ figure is what it would cost at list price
+  cost / 1,000     the free tier costs $0; in brackets, what it would cost at list price
   waiting / working / retrying (detail files): waiting = in our limiter's line; retrying = time
                    in calls that failed (429, timeout, error) plus the back-off before trying again
 """
@@ -115,22 +115,20 @@ def first_429(test):
 e_rpm, e_tpm = first_429("E_rpm"), first_429("F_tpm")
 out.append("## Table 1: Limits found in the real service (" + cal.get("model", "not measured") + ")\n")
 out.append("| Limit | Value found | How found | Confidence |\n|---|---|---|---|")
-out.append(f"| Requests per minute | 30 | tiny requests back to back: request {cal.get('rpm_first_429_at_request')} got "
-           f"the first 429, whose body says \"Limit 30, Used 30\" (one extra got through because the limit "
-           f"refills during the burst) | high |")
-out.append(f"| Tokens per minute | {cal.get('tpm') or 'not measured'} | x-ratelimit-limit-tokens header on every reply; "
+out.append(f"| Requests per minute | 30 | request {cal.get('rpm_first_429_at_request')} of a back-to-back run got the "
+           f"first 429 (\"Limit 30, Used 30\"; one extra slipped in as the limit refilled) | high |")
+out.append(f"| Tokens per minute | {cal.get('tpm') or 'not measured'} | x-ratelimit-limit-tokens header; "
            f"{cal.get('tpm_429_count_of_5')} of 5 big simultaneous requests got 429 | high |")
 out.append(f"| Requests per day | {cal.get('rpd') or 'not measured'} | x-ratelimit-limit-requests header | high |")
-out.append(f"| Tokens per day | {cal.get('tpd') or 'not measured'} | not in any header, not reached; from Groq's "
-           f"limits docs | low |")
+out.append(f"| Tokens per day | {cal.get('tpd') or 'not measured'} | not in any header, not reached; Groq docs | low |")
 out.append(f"| Requests in flight at once | at least 10 | {cal.get('concurrent_ok_of_10')} of 10 simultaneous requests "
-           f"succeeded; did not push higher (would cost budget for little) | low |")
-msg = (e_tpm or (example[0] if example else {})).get("message", "not measured")[:150]
-out.append(f"| What it returns when a limit is hit | HTTP 429, a retry-after header (whole seconds) and a body naming "
-           f"the limit: \"{msg}\" | captured in data/probe_429.json | high |")
-out.append(f"| Time until it recovers | RPM: retry-after {cal.get('rpm_retry_after_s')} s, worked again after "
-           f"{cal.get('rpm_recovery_s')} s. TPM: retry-after {cal.get('tpm_retry_after_s')} s, worked again after "
-           f"{cal.get('tpm_recovery_s')} s | waited retry-after minus 1 s, then retried every 0.5 s | high |")
+           f"succeeded; not pushed higher | low |")
+out.append("| What it returns when a limit is hit | HTTP 429, retry-after in whole seconds, and a body naming the limit: "
+           "\"Rate limit reached … on tokens per minute (TPM): Limit 8000, Used 7926, Requested 1983. Please try again "
+           "in 14.3175s\" | data/probe_429.json | high |")
+out.append(f"| Time until it recovers | RPM: retry-after {cal.get('rpm_retry_after_s')} s, worked after "
+           f"{cal.get('rpm_recovery_s')} s. TPM: retry-after {cal.get('tpm_retry_after_s')} s, worked after "
+           f"{cal.get('tpm_recovery_s')} s | waited retry-after minus 1 s, then tried every 0.5 s | high |")
 reset_req = (e_rpm or {}).get("headers", {}).get("x-ratelimit-reset-requests", "?")
 out.append(f"\n**How the limits refill (measured):** not in fixed windows. The RPM 429 said \"try again in 2s\" "
            f"(60 s / 30 requests); the TPM 429 asked to wait (tokens missing) / (8000 / 60 per s). Daily "
@@ -162,7 +160,7 @@ for s in load:
     x = S[s]
     err = f" (+{x['err']:.1f}% error)" if x["err"] else ""
     out.append(f"| {s} | {x['ok']:.1f} | {x['rl']:.1f} | {x['to']:.1f}{err} | {x['retries']:.2f} | {x['peak']} | "
-               f"{x['tokens']:.0f} | $0 on free tier (${x['cost']:.3f} at list price) |")
+               f"{x['tokens']:.0f} | $0 (${x['cost']:.3f} at list price) |")
 
 # ------------------------------------------------------------------ Table 3
 quality = sorted(s for s in by_scenario if s.startswith("quality_"))

@@ -2,13 +2,13 @@
 
 | Limit | Value found | How found | Confidence |
 |---|---|---|---|
-| Requests per minute | 30 | tiny requests back to back: request 32 got the first 429, whose body says "Limit 30, Used 30" (one extra got through because the limit refills during the burst) | high |
-| Tokens per minute | 8000 | x-ratelimit-limit-tokens header on every reply; 1 of 5 big simultaneous requests got 429 | high |
+| Requests per minute | 30 | request 32 of a back-to-back run got the first 429 ("Limit 30, Used 30"; one extra slipped in as the limit refilled) | high |
+| Tokens per minute | 8000 | x-ratelimit-limit-tokens header; 1 of 5 big simultaneous requests got 429 | high |
 | Requests per day | 1000 | x-ratelimit-limit-requests header | high |
-| Tokens per day | 200000 | not in any header, not reached; from Groq's limits docs | low |
-| Requests in flight at once | at least 10 | 10 of 10 simultaneous requests succeeded; did not push higher (would cost budget for little) | low |
-| What it returns when a limit is hit | HTTP 429, a retry-after header (whole seconds) and a body naming the limit: "Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m73aw1ncedqayzy0hdm8cn6m` service tier `on_demand` on tokens per minute (TPM)" | captured in data/probe_429.json | high |
-| Time until it recovers | RPM: retry-after 2.0 s, worked again after 2.5 s. TPM: retry-after 15.0 s, worked again after 14.7 s | waited retry-after minus 1 s, then retried every 0.5 s | high |
+| Tokens per day | 200000 | not in any header, not reached; Groq docs | low |
+| Requests in flight at once | at least 10 | 10 of 10 simultaneous requests succeeded; not pushed higher | low |
+| What it returns when a limit is hit | HTTP 429, retry-after in whole seconds, and a body naming the limit: "Rate limit reached … on tokens per minute (TPM): Limit 8000, Used 7926, Requested 1983. Please try again in 14.3175s" | data/probe_429.json | high |
+| Time until it recovers | RPM: retry-after 2.0 s, worked after 2.5 s. TPM: retry-after 15.0 s, worked after 14.7 s | waited retry-after minus 1 s, then tried every 0.5 s | high |
 
 **How the limits refill (measured):** not in fixed windows. The RPM 429 said "try again in 2s" (60 s / 30 requests); the TPM 429 asked to wait (tokens missing) / (8000 / 60 per s). Daily requests refill one at a time too: x-ratelimit-reset-requests was 1h19m12s after 55 requests, i.e. 86.4 s each. Tokens per day are assumed to refill the same way (not visible).
 
@@ -33,16 +33,16 @@ Also measured: first answer token p50/p95 = 617/1841 ms over 10 probe requests (
 
 | Scenario | Succeeded % | Rate-limited % | Timed out or given up % | Retries per request | Peak queue length | Tokens per answer | Cost per 1,000 answers |
 |---|---|---|---|---|---|---|---|
-| real_steady | 100.0 | 0.0 | 0.0 | 0.00 | 1 | 2185 | $0 on free tier ($0.190 at list price) |
-| real_burst_v1 | 20.0 | 80.0 | 0.0 | 0.00 | 8 | 602 | $0 on free tier ($0.057 at list price) |
-| real_burst | 30.0 | 70.0 | 0.0 | 0.00 | 4 | 664 | $0 on free tier ($0.057 at list price) |
-| steady | 100.0 | 0.0 | 0.0 | 0.00 | 1 | 2004 | $0 on free tier ($0.175 at list price) |
-| burst | 68.6 | 30.0 | 1.4 | 0.00 | 36 | 1337 | $0 on free tier ($0.115 at list price) |
-| overload | 90.6 | 8.9 | 0.6 | 0.01 | 8 | 1727 | $0 on free tier ($0.146 at list price) |
-| rpm_halved | 88.9 | 8.9 | 2.2 | 0.00 | 4 | 1693 | $0 on free tier ($0.144 at list price) |
-| daily_exhausted | 70.0 | 30.0 | 0.0 | 0.00 | 1 | 1300 | $0 on free tier ($0.112 at list price) |
-| burst_no_limiter | 73.3 | 23.3 | 3.3 | 0.52 | 50 | 1392 | $0 on free tier ($0.120 at list price) |
-| burst_naive_retry | 70.0 | 26.7 | 3.3 | 1.07 | 50 | 1334 | $0 on free tier ($0.115 at list price) |
+| real_steady | 100.0 | 0.0 | 0.0 | 0.00 | 1 | 2185 | $0 ($0.190 at list price) |
+| real_burst_v1 | 20.0 | 80.0 | 0.0 | 0.00 | 8 | 602 | $0 ($0.057 at list price) |
+| real_burst | 30.0 | 70.0 | 0.0 | 0.00 | 4 | 664 | $0 ($0.057 at list price) |
+| steady | 100.0 | 0.0 | 0.0 | 0.00 | 1 | 2004 | $0 ($0.175 at list price) |
+| burst | 68.6 | 30.0 | 1.4 | 0.00 | 36 | 1337 | $0 ($0.115 at list price) |
+| overload | 90.6 | 8.9 | 0.6 | 0.01 | 8 | 1727 | $0 ($0.146 at list price) |
+| rpm_halved | 88.9 | 8.9 | 2.2 | 0.00 | 4 | 1693 | $0 ($0.144 at list price) |
+| daily_exhausted | 70.0 | 30.0 | 0.0 | 0.00 | 1 | 1300 | $0 ($0.112 at list price) |
+| burst_no_limiter | 73.3 | 23.3 | 3.3 | 0.52 | 50 | 1392 | $0 ($0.120 at list price) |
+| burst_naive_retry | 70.0 | 26.7 | 3.3 | 1.07 | 50 | 1334 | $0 ($0.115 at list price) |
 
 ## Table 3: Retrieval settings
 
